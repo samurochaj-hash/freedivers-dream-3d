@@ -1,0 +1,1 @@
+Level folders are placeholders. Add authorized level data and manifests here.\n
