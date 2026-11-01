@@ -1,1 +1,1 @@
-Place only original or authorized models, textures, animations and sounds here.\n
+Level folders are placeholders. Add authorized level data and manifests here.\n
