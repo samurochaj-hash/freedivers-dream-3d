@@ -1,39 +1,24 @@
-# Freediver's Dream 3D (PS2 homebrew)
+# Freediver's Dream 3D — PS2 remake scaffold
 
-Protótipo original de mergulho livre para PlayStation 2. Desça pela corda-guia, toque a placa na profundidade-alvo e volte à superfície antes de apagar. Cada nível sobe o alvo em 5 m (10, 15, 20...).
+This is an initial source-project scaffold, not a finished game or ISO.
 
-Sem assets externos: câmera 3D, clipping, névoa, peixes, algas e HUD são todos procedurais (PS2SDK + gsKit).
+## Requirements
+- PS2SDK installed and configured
+- gsKit and dmaKit available in the selected PS2SDK build
+- MIPS/EE toolchain provided by PS2SDK
 
-## Controles
+## Build
+From this directory, run `make` in a PS2SDK-configured environment.
+The Makefile uses the standard PS2SDK sample makefile includes. Depending on
+your PS2SDK installation, adjust `PS2SDK` and library flags as needed.
 
-| Botão | Ação |
-|---|---|
-| Analógico esquerdo / D-pad | Direção (cima = mergulhar, baixo = subir) |
-| X | Bater perna (mais velocidade, gasta mais ar) |
-| R1 | Compensar os ouvidos |
-| START | Iniciar / reiniciar |
+## Current status
+- Project folders and module interfaces: created
+- Minimal gsKit screen-clear entry point: provided as an integration starting point
+- Player, physics, camera, levels, menu and audio: placeholders/interfaces only
+- Original-game assets and verified mechanics: not supplied
+- ELF compilation, emulator tests and ISO: not performed
 
-Dicas: perto da superfície você flutua para cima; abaixo de ~12 m você afunda sozinho, então deslize em vez de bater perna para economizar ar. A barra EAR enche conforme você desce; compense com R1 antes de chegar ao máximo, senão o ar acaba mais rápido.
-
-## Compilar (ELF + ISO)
-
-Precisa de Docker:
-
-```sh
-sh build.sh
-```
-
-Gera `FREEDIVE.ELF` e `FreediversDream3D.iso`.
-
-Sem Docker: suba esta pasta para um repositório no GitHub. O workflow em `.github/workflows/build.yml` compila e disponibiliza a ISO em Actions > Artifacts.
-
-Com ps2dev instalado localmente: `make && make iso` (a ISO exige xorriso, genisoimage ou mkisofs).
-
-## Rodar
-
-- **PCSX2:** abra `FreediversDream3D.iso`, ou execute o `FREEDIVE.ELF` direto (Sistema > Executar ELF).
-- **PS2 real:** o mais seguro é rodar o `FREEDIVE.ELF` por uLaunchELF ou ps2client. A ISO pode funcionar via OPL, mas não é garantido.
-
-## Estado do projeto
-
-A lógica de jogo e o visual foram validados num simulador no PC (mesmo `main.c`, APIs do PS2 simuladas), com um bot jogando até o nível 5. A compilação com o toolchain real do PS2 e a execução no PCSX2 ainda não foram testadas. Se algo falhar ao compilar (assinaturas do gsKit mudam entre versões), mande a mensagem de erro.
+## Important
+This project does not contain proprietary source code or assets from the original
+Freediver's Dream 3D. Add only files you own or are authorized to use.
