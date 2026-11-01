@@ -16,6 +16,7 @@ your PS2SDK installation, adjust `PS2SDK` and library flags as needed.
 - Project folders and module interfaces: created
 - Minimal gsKit screen-clear entry point: provided as an integration starting point
 - Player, physics, camera, levels, menu and audio: placeholders/interfaces only
+- Model skeleton and animation-state scaffold: added; no mesh/keyframe playback yet
 - Original-game assets and verified mechanics: not supplied
 - ELF compilation, emulator tests and ISO: not performed
 

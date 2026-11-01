@@ -1,5 +1,5 @@
 EE_BIN = FREEDIVER.ELF
-EE_OBJS = src/main.o src/player.o src/swimming.o src/physics.o src/camera.o src/levels.o src/menu.o src/audio.o
+EE_OBJS = src/main.o src/model.o src/player.o src/swimming.o src/physics.o src/camera.o src/levels.o src/menu.o src/audio.o
 EE_LIBS = -lgsKit -ldmaKit -lpatches
 
 all: $(EE_BIN)
