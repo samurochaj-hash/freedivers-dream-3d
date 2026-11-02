@@ -1,0 +1,1 @@
+FREEDIVER'S DREAM 3D — PLAYSTATION 2\nETAPA 27: SISTEMA DE SKINNING 3D\n\nCódigo-fonte base para deformação de malhas por Linear Blend Skinning. Não inclui rig, assets, conversor, ELF ou ISO. Não compilado/testado no hardware nesta etapa.\n
