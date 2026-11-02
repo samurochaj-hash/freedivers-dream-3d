@@ -1,8 +1,10 @@
 FREEDIVER'S DREAM 3D — PLAYSTATION 2
-ETAPA 29: IMPORTADOR DE MODELOS 3D ANIMADOS
+ETAPA 29: SISTEMA DE TRANSIÇÕES ENTRE ANIMAÇÕES 3D
 
-Adiciona um leitor de memória para o formato próprio FDM4 v1, com malha,
-pesos, esqueleto, bind-pose, trilhas e keyframes.
+Inclui:
+- include/animation_blend.h
+- src/animation_blend.c
+- docs/ANIMATION_BLEND.md
 
-Não é conversor FBX/OBJ/Blender, não lê diretamente CD/DVD, não inclui assets,
-ELF compilado nem ISO jogável. Código-base não compilado/testado no hardware.
+Base C para misturar poses de dois clipes com transição suave.
+Não contém clipes artísticos, ELF compilado ou ISO jogável.
